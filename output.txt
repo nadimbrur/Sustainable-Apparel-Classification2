@@ -1,0 +1,53 @@
+The model architecute are given below:
+
+BuildModel(
+  (feature): Sequential(
+    (0): Conv2d(1, 10, kernel_size=(3, 3), stride=(1, 1))
+    (1): Conv2d(10, 10, kernel_size=(3, 3), stride=(1, 1))
+    (2): BatchNorm2d(10, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (3): ReLU(inplace=True)
+    (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (5): Dropout2d(p=0.5, inplace=False)
+    (6): Conv2d(10, 16, kernel_size=(3, 3), stride=(1, 1))
+    (7): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1))
+    (8): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (9): Dropout2d(p=0.3, inplace=False)
+  )
+  (classifier): Sequential(
+    (0): Linear(in_features=1024, out_features=128, bias=True)
+    (1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU(inplace=True)
+    (3): Dropout(p=0.2, inplace=False)
+    (4): Linear(in_features=128, out_features=64, bias=True)
+    (5): Linear(in_features=64, out_features=32, bias=True)
+    (6): Linear(in_features=32, out_features=16, bias=True)
+    (7): Linear(in_features=16, out_features=10, bias=True)
+  )
+)
+
+
+
+Total number of parameters in the model:147328
+
+
+The loss is:30.97721224975586
+
+
+The accuracy of each class are give below:
+
+              precision    recall  f1-score   support
+
+ T-shirt/top     0.7764    0.7710    0.7737      1000
+     Trouser     0.9568    0.9520    0.9544      1000
+    Pullover     0.8156    0.4910    0.6130      1000
+       Dress     0.7991    0.8870    0.8408      1000
+        Coat     0.6237    0.7590    0.6847      1000
+      Sandal     0.7191    0.9600    0.8223      1000
+       Shirt     0.5157    0.4600    0.4863      1000
+     Sneaker     0.8685    0.7660    0.8140      1000
+         Bag     0.8054    0.8730    0.8378      1000
+  Ankle boot     0.9517    0.8470    0.8963      1000
+
+    accuracy                         0.7766     10000
+   macro avg     0.7832    0.7766    0.7723     10000
+weighted avg     0.7832    0.7766    0.7723     10000

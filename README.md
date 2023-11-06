@@ -10,6 +10,9 @@ Created by
 
 
 This repository contains implementation for CNN.
+## Dataset:
+The dataset contain in: https://www.kaggle.com/datasets/zalando-research/fashionmnist/data
+
 
 ## Description
 
